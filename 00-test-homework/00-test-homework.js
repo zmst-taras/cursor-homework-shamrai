@@ -20,19 +20,40 @@ document.writeln(`мінімальна ціна: ${minPrice}`);
 
 const sumPrice = (priceBook + priceCar + pricePhone);
 console.log(`Sum Numbers: ${sumPrice}`);
-document.writeln( `сума цін: ${sumPrice}`)
+document.writeln( `сума цін: ${sumPrice}`); 
 
 // Ex#4
 
 const priceBookFloor = Math.floor(priceBook);
 const priceCarFloor = Math.floor(priceCar);
 const pricePhoneFloor = Math.floor(pricePhone);
-const sumPriceFloor = (priceBookFloor + priceCarFloor + pricePhoneFloor);
+const sumPriceFloor = (priceBookFloor + priceCarFloor + pricePhoneFloor); /* сума чисел округлених до меншого*/
 console.log(` all sum prices floor: ${sumPriceFloor} griven' :)`);
-document.writeln( `округлення ціни до 100: ${sumPriceFloor} гривень :)`);
+document.writeln( ` сума округлення ціни до меншого: ${sumPriceFloor} гривень :)`);
 
 // Ex#5
 
 const roundHundredPrice = Math.round(sumPrice/100)*100;
 console.log(`round to Hundred Price: ${roundHundredPrice}`); 
 document.writeln( `округлення ціни до сотнів: ${roundHundredPrice}`);
+
+// Ex#6                      /* тут виходить непарне число, чому не можу розібратись*/
+const question = sumPriceFloor % 2 == 0 && sumPriceFloor %2 !==0 ? " парне" : "непарне  " ; 
+console.log (` Сума товарів є: ${question} число`); 
+
+
+  //Ex#6                    /* тут виходить парне число*/
+const result = sumPriceFloor % 2
+console.log(`Сума товарів є: ${result? 'непарне' : 'парне'} число`)
+
+  // Ex#7
+
+  const clientMoney = 500 ;
+  const sumRest = (clientMoney - priceBook) + (clientMoney - priceCar) + (clientMoney - pricePhone);
+  console.log (`Решта від сплати клієнта 500: ${sumRest}`)
+
+// Ex#8
+
+const mediumPrice = sumPrice / 3;
+const mediumPriceAfterComma = parseFloat(mediumPrice.toFixed(2));
+console.log(`Среднє значення ціни після коми: ${mediumPriceAfterComma}`);
