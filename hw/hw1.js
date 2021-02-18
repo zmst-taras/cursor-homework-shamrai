@@ -53,7 +53,7 @@ document.writeln( `округлення ціни до сотнів: ${roundHundr
 
   //Ex#6                    /* тут виходить парне число*/
 const result = sumPriceFloor % 2 == 0;
-console.log(`Сума товарів є: ${result ? 'парне' : 'непарне'} число`)
+console.log(`Сума товарів є: ${result ? 'парне' : 'непарне'} число`);
 
   // Ex#7
 
@@ -66,3 +66,4 @@ console.log(`Сума товарів є: ${result ? 'парне' : 'непарн
 const mediumPrice = sumPrice / 3;
 const mediumPriceAfterComma = parseFloat(mediumPrice.toFixed(2));
 console.log(`Среднє значення ціни після коми: ${mediumPriceAfterComma}`);
+
