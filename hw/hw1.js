@@ -8,7 +8,7 @@ document.writeln (priceBook, priceCar, pricePhone);
 
 const maxPrice = Math.max(priceBook, priceCar, pricePhone);
 console.log (`Max Numb: ${maxPrice}`);
-document.writeln( <p> `максимальна ціна: ${maxPrice} `</p>);
+document.writeln( `максимальна ціна: ${maxPrice} `);
 
 // Ex#2
 
