@@ -18,7 +18,7 @@ console.log (`Min Price: ${minPrice}`);
 
 // Ex#3
 
-const sumPrice = (priceBook + priceCar + pricePhone);
+const sumPrice = ( priceBook + priceCar + pricePhone );
 console.log(`Sum Prices: ${sumPrice}`);
 
 // Ex#4
@@ -26,12 +26,12 @@ console.log(`Sum Prices: ${sumPrice}`);
 const priceBookFloor = Math.floor(priceBook);
 const priceCarFloor = Math.floor(priceCar);
 const pricePhoneFloor = Math.floor(pricePhone);
-const sumPriceFloor = (priceBookFloor + priceCarFloor + pricePhoneFloor); /* сума чисел округлених до меншого*/
+const sumPriceFloor = ( priceBookFloor + priceCarFloor + pricePhoneFloor ); /* сума чисел округлених до меншого*/
 console.log(` All sum prices floor: ${sumPriceFloor} griven' :)`);
 
 // Ex#5
 
-const roundHundredPrice = Math.round((sumPrice/100)*100);
+const roundHundredPrice = Math.round( sumPrice / 100 ) * 100;
 console.log(`Round to hundred price: ${roundHundredPrice}`); 
 
 // Ex#6                      
@@ -68,32 +68,34 @@ console.log(`Round to hundred price: ${roundHundredPrice}`);
   const randomDiscount = Math.round( Math.random ( ) * 100 );
   console.log (`Random discount: ${randomDiscount} %`);
   
-  const sumPayForClient = (( sumPrice - (sumPrice / 100) * randomDiscount)).toFixed(2);
+  const sumPayForClient = +(( sumPrice - (sumPrice / 100) * randomDiscount)).toFixed(2);
   console.log(`Client pay sum: ${sumPayForClient}`);
 
-  const costOfGoods = ( sumPrice / 2 ).toFixed(2) ;
+  const costOfGoods = +( sumPrice / 2 ).toFixed(2) ;
   console.log (` Cost of goods: ${costOfGoods}`);
 
-  const cleanProfit = ( costOfGoods - sumPayForClient ).toFixed(2);
+  const cleanProfit = +( costOfGoods - sumPayForClient ).toFixed(2);
   console.log(`Clean  profit: ${cleanProfit}`);
 
 
 
 
   console.log(` 
-  ціна книги: ${priceBook};
-  ціна машини: ${priceCar};
-  ціна телефона: ${pricePhone};
-  максимальна ціна: ${maxPrice};
-  мінінмальна ціна: ${minPrice};
-  сума цін: ${sumPrice};
-  сума цін округлених в меншу сторону: ${sumPriceFloor};
-  округлення цін до сотень: ${roundHundredPrice};
-  сума товарів є: ${getEvenNumb (sumPriceFloor)} число;
-  решта від сплати клієнта 500, є: ${sumRest};
-  середнє значення ціни після коми: ${mediumPriceAfterComma};
-  випадкова знижка: ${randomDiscount};
-  клієнт платить суму зі знижкою: ${sumPayForClient};
-  собівартість: ${costOfGoods};
-  чистий прибуток: ${cleanProfit}.`)
+  
+    ціна книги: ${priceBook};
+    ціна машини: ${priceCar};
+    ціна телефона: ${pricePhone};
+    максимальна ціна: ${maxPrice};
+    мінінмальна ціна: ${minPrice};
+    сума цін: ${sumPrice};
+    сума цін округлених в меншу сторону: ${sumPriceFloor};
+    округлення цін до сотень: ${roundHundredPrice};
+    сума товарів є: ${getEvenNumb (sumPriceFloor)} число;
+    решта від сплати клієнта 500, є: ${sumRest};
+    середнє значення ціни після коми: ${mediumPriceAfterComma};
+    випадкова знижка: ${randomDiscount};
+    клієнт платить суму зі знижкою: ${sumPayForClient};
+    собівартість: ${costOfGoods};
+    чистий прибуток: ${cleanProfit}.
+    `)
 
