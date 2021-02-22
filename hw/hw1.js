@@ -1,38 +1,38 @@
-const priceBook = 15.678;
-const priceCar = 123.965;
-const pricePhone = 90.2345;
+  const priceBook = 15.678;
+  const priceCar = 123.965;
+  const pricePhone = 90.2345;
 
-console.log (`price Book: ${priceBook}`);
-console.log (`price Car: ${priceCar}`);
-console.log (`price Phone: ${pricePhone}`);
+  console.log (`price Book: ${priceBook}`);
+  console.log (`price Car: ${priceCar}`);
+  console.log (`price Phone: ${pricePhone}`);
 
 // Ex#1
 
-const maxPrice = Math.max(priceBook, priceCar, pricePhone);
-console.log (`Max Price: ${maxPrice}`);
+  const maxPrice = Math.max(priceBook, priceCar, pricePhone);
+  console.log (`Max Price: ${maxPrice}`);
 
 // Ex#2
 
-const minPrice = Math.min(priceBook, priceCar, pricePhone);
-console.log (`Min Price: ${minPrice}`);
+  const minPrice = Math.min(priceBook, priceCar, pricePhone);
+  console.log (`Min Price: ${minPrice}`);
 
 // Ex#3
 
-const sumPrice = ( priceBook + priceCar + pricePhone );
-console.log(`Sum Prices: ${sumPrice}`);
+  const sumPrice = ( priceBook + priceCar + pricePhone );
+  console.log(`Sum Prices: ${sumPrice}`);
 
 // Ex#4
 
-const priceBookFloor = Math.floor(priceBook);
-const priceCarFloor = Math.floor(priceCar);
-const pricePhoneFloor = Math.floor(pricePhone);
-const sumPriceFloor = ( priceBookFloor + priceCarFloor + pricePhoneFloor ); /* сума чисел округлених до меншого*/
-console.log(` All sum prices floor: ${sumPriceFloor} griven' :)`);
+  const priceBookFloor = Math.floor(priceBook);
+  const priceCarFloor = Math.floor(priceCar);
+  const pricePhoneFloor = Math.floor(pricePhone);
+  const sumPriceFloor = ( priceBookFloor + priceCarFloor + pricePhoneFloor ); /* сума чисел округлених до меншого*/
+  console.log(`All sum prices floor: ${sumPriceFloor} griven' :)`);
 
 // Ex#5
 
-const roundHundredPrice = Math.round( sumPrice / 100 ) * 100;
-console.log(`Round to hundred price: ${roundHundredPrice}`); 
+  const roundHundredPrice = Math.round( sumPrice / 100 ) * 100;
+  console.log(`Round to hundred price: ${roundHundredPrice}`); 
 
 // Ex#6                      
  
@@ -65,17 +65,20 @@ console.log(`Round to hundred price: ${roundHundredPrice}`);
 
   // Ex#9
   
-  const randomDiscount = Math.round( Math.random ( ) * 100 );
+  const discount = Math.round( Math.random () * 100 ) / 100;
+  const randomDiscount = Math.trunc( discount * 100 );
   console.log (`Random discount: ${randomDiscount} %`);
-  
-  const sumPayForClient = +(( sumPrice - (sumPrice / 100) * randomDiscount)).toFixed(2);
-  console.log(`Client pay sum: ${sumPayForClient}`);
+
+  const randomDiscountForClient = +(sumPrice * discount).toFixed(2);
+  const sumForPayClient = +( sumPrice - randomDiscountForClient ).toFixed(2);
+  console.log(`Client pay sum: ${sumForPayClient}`);
 
   const costOfGoods = +( sumPrice / 2 ).toFixed(2) ;
-  console.log (` Cost of goods: ${costOfGoods}`);
+  console.log (`Cost of goods: ${costOfGoods}`);
 
-  const cleanProfit = +( costOfGoods - sumPayForClient ).toFixed(2);
+  const cleanProfit = +( costOfGoods - sumForPayClient ).toFixed(2);
   console.log(`Clean  profit: ${cleanProfit}`);
+  
 
 
 
@@ -93,8 +96,8 @@ console.log(`Round to hundred price: ${roundHundredPrice}`);
     сума товарів є: ${getEvenNumb (sumPriceFloor)} число;
     решта від сплати клієнта 500, є: ${sumRest};
     середнє значення ціни після коми: ${mediumPriceAfterComma};
-    випадкова знижка: ${randomDiscount};
-    клієнт платить суму зі знижкою: ${sumPayForClient};
+    випадкова знижка: ${randomDiscount } %;
+    клієнт платить суму зі знижкою: ${sumForPayClient};
     собівартість: ${costOfGoods};
     чистий прибуток: ${cleanProfit}.
     `)
