@@ -47,8 +47,7 @@
  }
 
   console.log (`Sum prices is: ${getEvenNumb (sumPriceFloor)} number`);
-   const a =  sumPriceFloor % 2 === 0 
-   console.log (a)
+
 
   // Ex#7
 
