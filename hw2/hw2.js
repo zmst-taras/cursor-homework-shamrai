@@ -7,13 +7,14 @@ do{
   numberN = prompt("Введіть число N (Від 1 до 10)");
     console.log ("number N:" ,numberN);
 
-    //  if (!numberN.isInteger) {
+     if (numberN % 1 === 0) {
 
-    //   alert("Число має бути цілим. Будь - ласка повторіть спробу");
+      numberN     
 
-    //  } else{
-    //     numberN.isInteger
-    //  }
+      } else{
+      
+        alert("Число має бути цілим. Будь ласка повторіть спробу")
+    }
     
 }
 while( isNaN(numberN) || !(numberN >=1 && numberN <= 10));
@@ -22,8 +23,17 @@ while( isNaN(numberN) || !(numberN >=1 && numberN <= 10));
 
 let numberM
 do{
-  numberM = parseInt(prompt("Введіть число M (Будь-яке число)"));
-  console.log ("number M: ",numberM);
+  numberM = prompt("Введіть число M (Будь-яке число)");
+    console.log ("number M: ",numberM);
+
+      if (numberM % 1 === 0) {
+
+         numberM    
+
+      } else{
+    
+      alert("Число має бути цілим. Будь ласка повторіть спробу")
+   }
 
 }
 while( isNaN(numberM));
@@ -35,12 +45,11 @@ skipEvenNumber? "парне" : "не парне ";
     console.log ("пропускати парне:" ,skipEvenNumber,"число");
   
 // Ex# 6
+ let sumN_M = 0
 
-let sumN_M = 0;
-for( let cycle = numberN; cycle <= numberM; cycle++){
+  for( let cycle = numberN; cycle <= numberM; cycle++){
 
   if (skipEvenNumber && cycle % 2 === 0);{
-    
      sumN_M += cycle
   }
 
