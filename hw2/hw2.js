@@ -49,13 +49,14 @@ skipEvenNumber? "парне" : "не парне ";
 
   for( let cycle = numberN; cycle <= numberM; cycle++){
 
-  if (skipEvenNumber && cycle % 2 === 0);{
+  if (skipEvenNumber && cycle % 2 === 0){
      sumN_M += cycle
   }
+  else !(skipEvenNumber && cycle % 2 === 0)
 
- 
 }
-console.log ("sum:" ,sumN_M,)
+console.log ("sum at number N do number M:" ,sumN_M,);
+document.writeln("sum numbers at number N do number M:" ,sumN_M);
 
 
   
