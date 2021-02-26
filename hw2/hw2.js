@@ -1,10 +1,10 @@
 
  
-// Ex# 1 - 2 (Нехай в першому значенні N будуть числа від 1 до 10)
+// Ex# 1 - 2 
 
 let numberN;
 do{
-  numberN = prompt("Введіть число N (Від 1 до 10)");
+  numberN = prompt("Введіть число N ");
     console.log ("number N:" ,numberN);
 
      if (numberN % 1 === 0) {
@@ -17,7 +17,7 @@ do{
     }
     
 }
-while( isNaN(numberN) || !(numberN >=1 && numberN <= 10));
+while( Number.isNaN(numberN));
 
 //  Ex# 3 - 4 
 
@@ -36,7 +36,7 @@ do{
    }
 
 }
-while( isNaN(numberM));
+while( Number.isNaN(numberM));
 
 //  Ex# 5
 
@@ -44,19 +44,28 @@ while( isNaN(numberM));
 skipEvenNumber? "парне" : "не парне ";
     console.log ("пропускати парне:" ,skipEvenNumber,"число");
   
-// Ex# 6
- let sumN_M = 0
+// Ex# 6 - 7
+let sumN_M = 0
+if (skipEvenNumber ){
 
-  for( let cycle = numberN; cycle <= numberM; cycle++){
+  for( let y = numberN; y <= numberM; y++){
 
-  if (skipEvenNumber && cycle % 2 === 0){
-     sumN_M += cycle
-  }
-  else !(skipEvenNumber && cycle % 2 === 0)
+      if ( y % 2 != 0){
+          continue
+          
+      }
+      
+      sumN_M += y
+    }
+  }else{
+    for( let y = numberN; y <= numberM; y++){
+      sumN_M += y
+    }
 
-}
+  }  
+  
 console.log ("sum at number N do number M:" ,sumN_M,);
-document.writeln("sum numbers at number N do number M:" ,sumN_M);
+document.writeln("sum numbers at number N do number M: " ,sumN_M);
 
 
   
