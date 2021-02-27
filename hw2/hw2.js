@@ -34,9 +34,9 @@ do{
     
       alert("Число має бути цілим. Будь ласка повторіть спробу")
    }
-
+   
 }
-while( Number.isNaN(numberM));
+ while( Number.isNaN(numberM));
 
 //  Ex# 5
 
@@ -46,22 +46,18 @@ skipEvenNumber? "парне" : "не парне ";
   
 // Ex# 6 - 7
 let sumN_M = 0
-if (skipEvenNumber ){
+if (skipEvenNumber === true ){
 
   for( let y = numberN; y <= numberM; y++){
 
-      if ( y % 2 != 0){
-          continue
-          
+      if ( y % 2 === 0){
+          continue;
+      } sumN_M += y;
+    }
+  } else {
+      for( let y = numberN; y <= numberM; y++){
+        sumN_M += y;
       }
-      
-      sumN_M += y
-    }
-  }else{
-    for( let y = numberN; y <= numberM; y++){
-      sumN_M += y
-    }
-
   }  
   
 console.log ("sum at number N do number M:" ,sumN_M,);
