@@ -4,7 +4,7 @@
 
 let numberN;
 do{
-  numberN = prompt("Введіть число N ");
+  numberN = +(prompt("Введіть число N "));
     console.log ("number N:" ,numberN);
 
      if (numberN % 1 === 0) {
@@ -23,7 +23,7 @@ while( Number.isNaN(numberN));
 
 let numberM
 do{
-  numberM = prompt("Введіть число M (Будь-яке число)");
+  numberM = +(prompt("Введіть число M "));
     console.log ("number M: ",numberM);
 
       if (numberM % 1 === 0) {
