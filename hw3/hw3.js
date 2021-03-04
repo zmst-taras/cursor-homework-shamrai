@@ -6,7 +6,7 @@
   return maxNumber;
   }
   console.log("функція №1:" , getMaxDigit(1321564648132));
-  document.writeln(`Максимальне число: ${getMaxDigit(123456789)} <br>`);
+  document.writeln(` Функція №1: максимальне число: ${getMaxDigit(123456789)} <br>`);
 
   // ІІ завдання. Функція - яка визначає ступінь числа
  
@@ -18,7 +18,7 @@
    return x;
  }
  console.log ("ступінь числа:" ,degreeOfNumber(2,5));
- document.writeln(`ступінь числа: ${degreeOfNumber(2,5)} <br>`);
+ document.writeln(`Функція №2: ступінь числа: ${degreeOfNumber(2,5)} <br>`);
 
   // ІІІ завдання, функція щ форматує ім'я / Зроблено  через рефакторінг
 
@@ -38,6 +38,7 @@ function nameFormatRefactoring3 (name){
   return name.charAt(0).toUpperCase() +  name.slice(1).toLowerCase();
 } 
 console.log("nameFormat : function = ", nameFormat("fuNctIon"));
+document.writeln(` Функція №3: ім'я з Великої літери: ${nameFormat("фУНкЦіЯ", "аНАсТаСіЯ")} <br>`);
 console.log("nameFormatRefactoring : function = ", nameFormatRefactoring2("fuNction"));
 console.log("nameFormatRefactoring2 : function = ", nameFormatRefactoring3("фуНКЦіЯ"));
 
@@ -50,7 +51,7 @@ function getTaxes (sum){
   return division;
 }
 console.log("сума після податків:" ,getTaxes(1000));
-document.writeln(`сума після податків: ${getTaxes(1000)} <br>`)
+document.writeln(`Функція №4: сума після податків: ${getTaxes(1000)} <br>`)
 
 
 // V завдання ,  функція що повертає рандомне число
@@ -61,20 +62,23 @@ function randomNumber(n,m){
   return getRandom;
 }
 console.log("рандомне число:" ,randomNumber(-100,100))
-document.writeln(`рандомне число: ${randomNumber(-100,100)}`);
+document.writeln(`Функція №5: рандомне число: ${randomNumber(-100,100)} <br>`);
 
 // VІ завдання ,  "повторение - мать учение"
 
  function searchLetters (letters, word){
+
    let counter = 0 ;
    for ( let i = 0; i < word.length; i++ ){
-     if (word [i] === letters) 
+     if (word[i].toLowerCase() === letters.toLowerCase()) 
      counter++;
    }
-   return counter;
+   return `повторення літери "${letters}" в реченні " ${word} " в кількості ${counter} рази`;
  }
- console.log(`повторення літери "а" в слові "парадігма"   ${searchLetters('а',  'парадігма')}`);
+ const searchLetters2 = searchLetters( 'р', 'Круїз Тома Круза кращий');
 
+ console.log(searchLetters("р",  "Круїз Тома Круза кращий"));
+ document.writeln(`Функція №6:  ${searchLetters2}`);
 
 
 
