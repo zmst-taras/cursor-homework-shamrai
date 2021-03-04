@@ -67,10 +67,12 @@ document.writeln(`Функція №5: рандомне число: ${randomNumb
 // VІ завдання ,  "повторение - мать учение"
 
  function searchLetters (letters, word){
+   const lettersLower = letters.toLowerCase();
+   const wordLower = word.toLowerCase();
 
    let counter = 0 ;
-   for ( let i = 0; i < word.length; i++ ){
-     if (word[i].toLowerCase() === letters.toLowerCase()) 
+   for ( let i = 0; i < wordLower.length; i++ ){
+     if (word[i] === lettersLower) 
      counter++;
    }
    return `повторення літери "${letters}" в реченні " ${word} " в кількості ${counter} рази`;
