@@ -16,7 +16,7 @@ function getPairs (students){
   return pairsForMarch8;
 }
 const pairsStudents = getPairs(students);
-console.log(getPairs(students));
+console.log(pairsStudents);
 
 /* #2
 Зіставте пари з попереднього завдання та теми проєктів, над якими студенти будуть працювати.
@@ -29,8 +29,8 @@ function getPairsWithThemes (pairsStudents, themes){
   }
   return studentsThemes;
 }
-const PairsStudentsWithThemes = getPairsWithThemes(pairsStudents,themes);
-console.log(PairsStudentsWithThemes);
+const pairsStudentsWithThemes = getPairsWithThemes(pairsStudents,themes);
+console.log(pairsStudentsWithThemes);
 
 /* #3
 Зіставте оцінки(marks) зі студентом(students): [["Саша", 4], [...], [...]]
@@ -38,7 +38,7 @@ console.log(PairsStudentsWithThemes);
 function getMarksWithStudents(students, marks){
   let studentsMarks = [];
   for (let i = 0; i < marks.length; i++) {
-    studentsMarks = [students[i], marks[i]];
+    studentsMarks[i] = [students[i], marks[i]];
   }
   return studentsMarks;
 }
@@ -49,7 +49,16 @@ console.log(studentsMarks2);
 Поставте кожній парі випадкову оцінку(від 1 до 5) за проєкт(тут функція буде нечистою, але не повинна мутувати массив):
  [["Олександр і Олена", "Теорія автоматів", 5], [...], [...]]
  */
-
+ function getPairsRandomMarks (pairsStudents, themes){
+    let randomMarks = [];
+    for (let i = 0; i < pairsStudents.length; i++) {
+      mark = Math.ceil(Math.random() * 5) ;
+      randomMarks[i] = [pairsStudents[i], themes[i], mark];
+    } 
+    return randomMarks;
+ }
+ const marksRandom = getPairsRandomMarks (pairsStudents, themes)
+  console.log(marksRandom);
 
 
 
