@@ -11,7 +11,7 @@ function getPairs (students){
   const girls = [students[2],students[3],students[5]];
   let pairsForMarch8 = [];
   for (i = 0; i < boys.length; i++) {
-    pairsForMarch8[i] = [boys[i], girls[i]];
+    pairsForMarch8[i] = [boys[i], girls[i]]
   }
   return pairsForMarch8;
 }
@@ -24,8 +24,9 @@ console.log(pairsStudents);
  */
 function getPairsWithThemes (pairsStudents, themes){
   let studentsThemes = [];
-  for (let i = 0; i < pairsStudents.length; i++) {
-     studentsThemes[i] = [pairsStudents[i], themes[i]];
+  for (let i = 0; i < themes.length; i++) {
+     studentsThemes[i] = pairsStudents[i].join(" i ").split(",");
+     studentsThemes[i].push(themes[i]);
   }
   return studentsThemes;
 }
@@ -52,8 +53,9 @@ console.log(studentsMarks2);
  function getPairsRandomMarks (pairsStudents, themes){
     let randomMarks = [];
     for (let i = 0; i < pairsStudents.length; i++) {
-      mark = Math.ceil(Math.random() * 5) ;
-      randomMarks[i] = [pairsStudents[i], themes[i], mark];
+       let mark = Math.ceil(Math.random() * 5);
+      randomMarks[i] = [pairsStudents[i].join(' i '), themes[i], mark];
+      
     } 
     return randomMarks;
  }
