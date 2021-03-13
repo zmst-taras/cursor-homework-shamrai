@@ -1,0 +1,23 @@
+.titulka{
+
+  position:absolute;
+  margin: 0;
+  padding-top: 25%;
+  padding-bottom: 25%;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  box-sizing: border-box;
+  text-align: center;
+  align-items: center;
+   color:rgb(255, 29, 29);
+   background-color:#1dffbb;
+   font-size: 20px;
+   font-family: 'Reggae One', cursive;
+   letter-spacing: 0.3em;
+
+}
+.titulka:hover{
+  background-color: rgb(15, 10, 14);
+  color:greenyellow;
+}
