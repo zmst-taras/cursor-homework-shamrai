@@ -22,25 +22,25 @@ const sumAvarageNumb = getAvarage(12,12,54,87,4,2,5,4,4,5,4,68,4,8,6,5.85,9,4,25
 console.log("#3 середнє значення аргументів:",sumAvarageNumb);
 
 // #4
-// function getMedian (...numbers){
-//   const filterNumberInteger = numbers.filter(numb =>  Number.isInteger(numb));
-//   const  sortingArrays = filterNumberInteger.sort((a, b) => a - b);
-//     if (sortingArrays.length % 2 === 0){
-//       const  arr = 0;
-//       for (let i = 0; i < sortingArrays.length; i++) {
-//         arr[i] = sortingArrays[i] / 2;
-//         return arr;
-//       }
-//     }else if(sortingArrays.length % 1 === 0){
-//       const total = filterNumberInteger.reduce((accummulator, numb) =>{
-//         return accummulator + numb;
-//       }, 0);
-//         return total / numbers.length;
-//       }
-//     }
+function getMedian (...numbers){
+  const filterNumberInteger = numbers.filter(numb =>  Number.isInteger(numb));
+  const  sortingArrays = filterNumberInteger.sort((a, b) => a - b);
+    if (sortingArrays.length % 2 === 0){
+      const  arr = 0;
+      for (let i = 0; i < sortingArrays.length; i++) {
+        arr[i] = sortingArrays[i] / 2;
+        return arr;
+      }
+    }else if(sortingArrays.length % 1 === 0){
+      const total = filterNumberInteger.reduce((accummulator, numb) =>{
+        return accummulator + numb;
+      }, 0);
+        return total / numbers.length;
+      }
+    }
 
-// const medianArrays = getMedian(9,16,2,1.5,4,11,3,18,15,4,7);
-// console.log("#4 медіана всіх аргументів:",medianArrays);
+const medianArrays = getMedian(9,16,2,1.5,4,11,3,18,15,4,7);
+console.log("#4 медіана всіх аргументів:",medianArrays);
 
 
 
