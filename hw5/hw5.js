@@ -12,8 +12,7 @@ console.log("#1 масив випадкових чисел:",comeback);
 // #3
 function getAvarage(...numbers){
   const filterNumberInteger = numbers.filter(numb =>  Number.isInteger(numb));
-  const sum = filterNumberInteger.reduce((sum, number) => 
-  {
+  const sum = filterNumberInteger.reduce((sum, number) => {
     return sum + number;
   }, 0);
     return (sum / numbers.length).toFixed(2);
@@ -25,21 +24,12 @@ console.log("#3 середнє значення аргументів:",sumAvarag
 function getMedian (...numbers){
   const filterNumberInteger = numbers.filter(numb =>  Number.isInteger(numb));
   const  sortingArrays = filterNumberInteger.sort((a, b) => a - b);
-    if (sortingArrays.length % 2 === 0){
-      const  arr = 0;
-      for (let i = 0; i < sortingArrays.length; i++) {
-        arr[i] = sortingArrays[i] / 2;
-        return arr;
-      }
-    }else if(sortingArrays.length % 1 === 0){
-      const total = filterNumberInteger.reduce((accummulator, numb) =>{
-        return accummulator + numb;
-      }, 0);
-        return total / numbers.length;
-      }
+  const floorMiddle = Math.floor( (sortingArrays.length - 1) / 2);
+  const ceilMiddle = Math.ceil( (sortingArrays.length - 1) / 2);
+  return ( sortingArrays[floorMiddle] + sortingArrays[ceilMiddle]) / 2;
     }
 
-const medianArrays = getMedian(9,16,2,1.5,4,11,3,18,15,4,7);
+const medianArrays = getMedian(9,16,2,1.5,4,11,3.14,3,18,15,4,7);
 console.log("#4 медіана всіх аргументів:",medianArrays);
 
 
