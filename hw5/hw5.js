@@ -10,14 +10,14 @@ const comeback = getRandomArray(10, 10, 100)
 console.log("#1 масив випадкових чисел:",comeback);
 
 // #3
-function getAvarage(...numbers){
+function getAverage(...numbers){
   const filterNumberInteger = numbers.filter(numb =>  Number.isInteger(numb));
   const sum = filterNumberInteger.reduce((sum, number) => {
     return sum + number;
   }, 0);
     return (sum / numbers.length).toFixed(2);
 };
-const sumAvarageNumb = getAvarage(12,12,54,87,4,2,5,4,4,5,4,68,4,8,6,5.85,9,4,25.003,44,2,1,42,22,1)
+const sumAvarageNumb = getAverage(12,12,54,87,4,2,5,4,4,5,4,68,4,8,6,5.85,9,4,25.003,44,2,1,42,22,1)
 console.log("#3 середнє значення аргументів:",sumAvarageNumb);
 
 // #4
