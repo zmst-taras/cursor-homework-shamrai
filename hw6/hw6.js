@@ -30,17 +30,19 @@ const students = [{
 function getSubjects(students) {
   const subjectsKeys = Object.keys(students.subjects);
   const result = subjectsKeys.map((subject) => {
+
     return (subject[0].toUpperCase() + subject.slice(1)).replaceAll('_', ' ');
   });
 
   return result;
-}console.log(`cписок предметів для студента:${students[0]}  ${getSubjects(students[0])}`);
+}console.log(`cписок предметів для студента:${students[0]}, ${getSubjects(students[0])}`);
 
 // #2
 // getAverageMark(students[0]) --> 3.79
 
 const getAverageMark = (students) => {
   const allMarks = Object.values(students.subjects).flat(1);
+
   return (allMarks.reduce((sum, mark) => sum + mark) / allMarks.length).toFixed(2);
 }
 console.log('середня оцінка по всім предметам:' ,getAverageMark(students[0]));
@@ -48,6 +50,7 @@ console.log('середня оцінка по всім предметам:' ,get
 //  Ex#3
 // getStudentInfo(students[0]) --> { "course": 3, "name": "Tanya", "averageMark": 3.79}
  const getStudentInfo = (students) => {
+
   return{
     course: students.course,
     name: students.name,
@@ -60,9 +63,11 @@ console.log('середня оцінка по всім предметам:' ,get
 // getStudentsNames(students) --> ["Anton", "Tanya, "Victor"]
 function getStudentsNames(students) {
   let nameArray = [];
+
   for (const key in students) {
     nameArray[key] = (students[key].name);
   }
+
   return nameArray;
 };
 console.log("імена студентів в алфавітному порядку:" ,getStudentsNames(students));
@@ -83,16 +88,18 @@ console.log("імена студентів в алфавітному поряд�
 function getBestStudent (students){
     let bestStudent = '';
     let bestMark = 0;
-for (const key in students) {                              
-  const studentsMark = getAverageMark(students[key]);       
+
+  for (const key in students) {                              
+  const studentsMark = getAverageMark(students[key]);    
+
   if(studentsMark > bestMark) {
     bestStudent = students[key].name;
   } 
 }
+
     return bestStudent;
 }
-
-console.log(`кращий студент: ${getBestStudent(students)} -гандон`);
+console.log(`кращий студент: ${getBestStudent(students)}`);
 
 
 // Ex#6
@@ -101,11 +108,12 @@ console.log(`кращий студент: ${getBestStudent(students)} -ганд�
 
 function calculateWordLetters(string) {
   const arrString = string.split('');
-  const obj = {};
   const result = arrString.reduce((prev, current) =>{
     prev[current] = (prev[current] || 0) +1;
-    return prev
-  },obj);
-  return result;
+
+    return prev;
+  },{});
+
+    return result;
 };
 console.log(calculateWordLetters('тест'));
