@@ -1,11 +1,11 @@
 // 1.
 class Student {
-  Constructor (university, course, fullName, marks = []) {
+  constructor (university, course, fullName, marks = []) {
     this.university = university, 
     this.course = course,
     this.fullName = fullName,
     this.marks = marks,
-    this.dismiss = true;
+    this.studentDismiss = true;
   };
 
 
@@ -13,21 +13,24 @@ class Student {
   
     getInfo() {
 
-      return `Студент ${this.course} курсу ${this.university} м.Одеса, ${this.name}`
+      return `Студент ${this.course} курсу, ${this.university} м.Одеса, ${this.name}`
     };
 
   // 3.
 
     get getMarks(){
+      if (this.studentDismiss === false) {
+
          return this.marks
-      };
+      }
+    };
 
 
   // 4.
 
     set setMarks(mark) {
 
-      if (this.dismiss === false) {
+      if (this.studentDismiss === false) {
 
         return this.marks.push(mark)
     }
@@ -39,49 +42,47 @@ class Student {
 
   // 6.
 
-  studentDismiss() {
-    this.dismiss === false
+    studentDismiss() {
+    this.studentDismiss === false
     console.log("Студента виключено!");
-  };
+    };
 
   // 7.
 
-  studentRecover() {
-    this.dismiss === true
+    studentRecover() {
+    this.studentDismiss === true
     console.log("Студента поновлено!");
-  }
+    }
 };
 
 
  // Advanced 
 
     class BudgetStudent extends Student{
-      constructor(university, course, fullName, dismiss){
-        super(university, course, fullName, dismiss);
-      setInterval(() => {this.schoolarShip()
+      constructor(university, course, fullName, marks, studentDismiss){
+        super(university, course, fullName, marks, studentDismiss);
+      setInterval(() => { this.schoolarShip()
       }, 3000)
     };
     
 
 
-  schoolarShip(){
+    schoolarShip(){
     const studentMark = 4;
 
-    if( studentMark < this.getAverageMark() && this.dismiss === false){
-      console.log (` Ви отримали 1400 грн. стипендії `)
+    if( studentMark < this.getAverageMark() && this.studentDismiss === true){
+      console.log ( `Ви отримали 1400 грн. стипендії` )
 
-    } else {
-      
+    } 
       console.log ( `Ви не отримали стипендії :( `);
     }
-  }
-};
+  };
 
-  const ostap = new BudgetStudent (`Вища Школи Психотерапії м.Одеса`, 1, `Остап Бендер`,  [5, 4, 4, 5]);
+  const ostap = new BudgetStudent (`Вища Школи Психотерапії м.Одеса`, 1, `Остап Бендер`,  [5, 4, 5, 4]);
   ostap.setMarks = 5;
   const petro = new Student (`Вища Школи Журналістики м.Вінниця`, 3, `Петро`, [5, 4, 4, 5]);
-
+  petro.setMarks = 5;
   
     console.log(ostap.getInfo);
     console.log(petro.getInfo);
-    console.log(petro.getScholarship());
+    console.log(petro.scholarShip());
