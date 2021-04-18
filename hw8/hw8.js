@@ -88,14 +88,3 @@ class Student {
     console.log(petro.getInfo);
     console.log(petro.schoolarShip());
 
-
-
-    // buttons onclick
-    //........................................................................
-     function text1(){
-      document.getElementsByClassName ("hi").append("Thaks for visit")
-    };
-     function text2(){
-      document.getElementsByClassName("hey").append("Сome again")
-    };
-    //.........................................................................
