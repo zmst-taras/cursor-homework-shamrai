@@ -1,19 +1,7 @@
-.titulka{
-
-  position:absolute;
-  margin: 0;
-  padding-top: 25%;
-  padding-bottom: 25%;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  box-sizing: border-box;
+.btn{
+  display: flex;
+  position:relative;
+  margin: 10px;
+  padding: 10px;
   text-align: center;
-  align-items: center;
-   color:rgb(206, 51, 172);
-   background-color:#80d4ea;
-   font-size: 20px;
-   font-family: 'Reggae One', cursive;
-   letter-spacing: 0.3em;
-
 }

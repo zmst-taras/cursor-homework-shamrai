@@ -11,9 +11,9 @@ class Student {
 
   // 2.
   
-    getInfo() {
+      get getInfo() {
 
-      return `Студент ${this.course} курсу, ${this.university} м.Одеса, ${this.name}`
+      return (`Студент ${this.course}-го курсу,  університету ${this.university} м.Одеса, ${this.name}`)
     };
 
   // 3.
@@ -61,8 +61,7 @@ class Student {
     class BudgetStudent extends Student{
       constructor(university, course, fullName, marks, studentDismiss){
         super(university, course, fullName, marks, studentDismiss);
-      setInterval(() => { this.schoolarShip()
-      }, 3000)
+      setInterval( () =>  this.schoolarShip(), 3000 )
     };
     
 
@@ -78,11 +77,25 @@ class Student {
     }
   };
 
-  const ostap = new BudgetStudent (`Вища Школи Психотерапії м.Одеса`, 1, `Остап Бендер`,  [5, 4, 5, 4]);
+  
+
+  const ostap = new Student (`Вища Школи Психотерапії м.Одеса`, `1`, `Остап Бендер`,  [5, 4, 5, 4]);
   ostap.setMarks = 5;
-  const petro = new Student (`Вища Школи Журналістики м.Вінниця`, 3, `Петро`, [5, 4, 4, 5]);
+  const petro = new BudgetStudent (`Вища Школи Журналістики м.Вінниця`, 3, `Петро`, [5, 4, 4, 5]);
   petro.setMarks = 5;
   
     console.log(ostap.getInfo);
     console.log(petro.getInfo);
-    console.log(petro.scholarShip());
+    console.log(petro.schoolarShip());
+
+
+
+    // buttons onclick
+    //........................................................................
+     function text1(){
+      document.getElementsByClassName ("hi").append("Thaks for visit")
+    };
+     function text2(){
+      document.getElementsByClassName("hey").append("Сome again")
+    };
+    //.........................................................................
