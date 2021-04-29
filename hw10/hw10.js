@@ -1,14 +1,14 @@
 
 function blocks() {
     const container = document.createElement('div');
-    container.classList.add('container#1')
-    document.body.append(container)
+    container.classList.add('container');
+    
 
     for (let i = 0; i < 5; i++) {
 
-        
+        document.body.append(container)
         const square = document.createElement('div');
-        square.classList.add('square#1');
+        square.classList.add('square');
         square.style.display = "flex"
         container.appendChild(square);
 
@@ -48,20 +48,24 @@ function blocks() {
     document.querySelector('.container').remove();
     blocks()
     
-}
+};
 
 
-let cut= false
+let cut = false
 
 function blocksInterval() {
 
-    cut= false
+    cut = false
 
     setInterval(() => {
-        if (cut) {
+        
+        if (cut )   {
             return
         }
-            createBlocks();
+  
+             createBlocks();
+        
+           
        
 
     }, 1500)

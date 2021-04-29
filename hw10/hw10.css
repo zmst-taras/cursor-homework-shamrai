@@ -12,6 +12,17 @@
 };
 
 
+#main{
+  background: rgb(88, 173, 81);
+  font-family: 'Zen Dots', cursive;
+  color: rgb(211, 67, 67);
+  text-align: center;
+  margin:  50px;
+  padding-bottom: 0px;
+  padding: 0px;
+
+};
+
 .view{
   display: block;
   position: absolute;
@@ -20,16 +31,14 @@
   background: rgb(60, 114, 161);
 };
 
-#b1
-{
+#b1{
    background-position: 50px 0;
    border-radius: 50px 0 0 50px;
    color: rgb(0, 146, 32);
    
 };
 
-#b2
-{
+#b2{
    background-position: 50px 0;
   
    margin-left: 5px;
