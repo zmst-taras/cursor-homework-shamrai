@@ -16,13 +16,14 @@ function blocks() {
       
             const blocks = document.createElement("div");
             blocks.classList.add("blocks");
-        
             square.appendChild(blocks); 
            
-            blocks.style.background = randomColor();
+            blocks.style.background = getRandomBackgroundColor();
             blocks.style.height = "50px"
             blocks.style.width = "50px"
             blocks.style.margin = "1px"
+            blocks.style.borderRadius = "5px"
+
             container.style.alignContent= "center"
             container.style.marginTop ="50px"
             container.style.marginLeft ="300px"
@@ -33,41 +34,31 @@ function blocks() {
     };
 };
 
- const randomColor = () => {
-    // const color = "rgb(" + (Math.random()*255) + ",8,508)";
-    // return color;
-  
-    return '#' + Math.floor(Math.random()*16777215).toString(16)
- };
+ const getRandomColorNumber = () => {
+      return Math.floor(Math.random() * 256);
+}
+const getRandomBackgroundColor = () => {
+    return `rgb(${getRandomColorNumber()},${getRandomColorNumber()},${getRandomColorNumber()})`
+};
+
 
  function createBlocks () {
     if (!document.querySelector('.container')) {
         blocks();
        
     }
-    document.querySelector('.container').remove();
-    blocks()
+        document.querySelector('.container').remove();
+        blocks()
     
 };
 
 
-let cut = false
 
 function blocksInterval() {
 
-    cut = false
-
     setInterval(() => {
         
-        if (cut )   {
-            return
-        }
-  
              createBlocks();
-        
-           
-       
-
     }, 1500)
 };
 
