@@ -51,7 +51,7 @@ const getRandomBackgroundColor = () => {
         blocks()
     
 };
-
+ 
 
 
 function blocksInterval() {
